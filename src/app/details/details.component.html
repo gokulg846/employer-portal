@@ -1,0 +1,71 @@
+<div *ngIf = "employee">
+    <table style="float: left;
+                  padding: 12px;
+                  margin-left: 10%;
+                  table-layout: fixed;
+                  width: 25%;
+                  margin-top: 5%;
+                  border-right: solid black;">
+            <tr aria-rowspan="2">
+                <td style="text-align: center;"><img class = "center" src={{employee.image}}></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong style="font-size: 24px;">{{employee.empname}}</strong></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; color: gray;">{{employee.des}}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center; color: gray;">Employee ID: {{employee.id}}</td>
+            </tr>
+    </table>
+    <table style="float: left;
+        border-spacing: 1000 px;
+        margin-left: 5%;
+        margin-top: 5%;
+        width: 30%;">
+        <tr>
+            <td colspan="2" style="text-decoration: underline;">Details</td>
+        </tr>
+        <tr>
+            <td>Date of Birth: </td>
+            <td>{{employee.dob}}</td>
+        </tr>
+        <tr>
+            <td>Date of Joining: </td>
+            <td>{{employee.doj}}</td>
+        </tr>
+        <tr>
+            <td>Contact Details </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&emsp;Address 1: </td>
+            <td>{{employee.add1}}</td>
+        </tr>
+        <tr>
+            <td>&emsp;Address 2: </td>
+            <td>{{employee.add2}}</td>
+        </tr>
+        <tr>
+            <td>&emsp;State: </td>
+            <td>{{employee.state}}</td>
+        </tr>
+        <tr>
+            <td>&emsp;City: </td>
+            <td>{{employee.city}}</td>
+        </tr>
+        <tr>
+            <td>&emsp;Country: </td>
+            <td>{{employee.country}}</td>
+        </tr>
+        <tr>
+            <td>&emsp;Pin: </td>
+            <td>{{employee.pin}}</td>
+        </tr>
+        <tr>
+            <td>Mobile Number: </td>
+            <td>{{employee.phone}}</td>
+        </tr>
+    </table>
+</div>
