@@ -9,7 +9,8 @@ import { DetailsComponent } from './details/details.component';
 import { ContactComponent } from './contact/contact.component';
 import { Router } from 'next/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,17 +21,20 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
     RouterModule.forRoot([
+      { path: 'home', component: HomeComponent},
       { path: '', component: HomeComponent},
-      { path: 'details/:empId', component: DetailsComponent},
+      { path: 'details', component: DetailsComponent},
       { path: 'contact', component:ContactComponent},
     ])
   ],
   providers: [],
   bootstrap: [AppComponent,
-              TopBarComponent,
+              TopBarComponent
             ]
 })
 export class AppModule { }

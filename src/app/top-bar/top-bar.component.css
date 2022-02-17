@@ -7,5 +7,11 @@ div.name{
     padding: 5px 0;
 }
 .navbar-custom{
-    background-color: lightsalmon;
+    background-color: lightgray;
+    height: 40px;
+}
+.active{
+    background-color: whitesmoke;
+    height: 42px;
+    margin-top: 3px;
 }

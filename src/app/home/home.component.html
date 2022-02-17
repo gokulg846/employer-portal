@@ -1,5 +1,9 @@
-    <table>
-        <h6>Employee Details</h6>
+<div class="boxed">
+    <h5>Employee Details</h5>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <a (click)="List()" *ngIf="cardView" class="material-icons">view_list</a>
+    <a (click)="Detail()" *ngIf="listView" class="material-icons">view_module</a>
+    <table class="container" *ngIf="listView">
         <tr>
             <th>Employee Name</th>
             <th>Date of Joining</th>
@@ -7,10 +11,23 @@
             <th>Employee Id</th>
         </tr>
         <tr *ngFor="let emp of employees">
-            <td><a [routerLink] = "['/details', emp.id]">{{emp.empname}}</a></td>
-            <td>{{emp.doj}}</td>
+            <td><a (click) = "onClick(emp)">{{emp.empname}}</a></td>
+            <td>{{emp.doj | date: 'mediumDate'}}</td>
             <td>{{emp.des}}</td>
             <td>{{emp.id}}</td>
         </tr>
     </table>
+    <section class="container" *ngIf="cardView">
+        <mat-card *ngFor="let emp of employees">
+            <a (click) = "onClick(emp)">
+            <mat-card-subtitle>{{emp.empname}}</mat-card-subtitle>
+            <mat-card-content>{{emp.doj | date: 'mediumDate'}}</mat-card-content>
+            <mat-card-content>{{emp.des}}</mat-card-content>
+            <mat-card-content>{{emp.id}}</mat-card-content>
+            </a>
+        </mat-card>
+    </section>
+</div>
+
+
     

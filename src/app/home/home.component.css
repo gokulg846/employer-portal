@@ -1,8 +1,10 @@
 table{
     border-collapse: collapse;
-    width: 100%;
-    margin-top: 100px;
+    width: 94%;
+    margin-top: 40px;
     border-spacing: 0 100px;
+    margin-left: 3%;
+    
 }
 th, td {
     text-align: left;
@@ -15,4 +17,69 @@ th, td {
 div.table{
     width: 100%;
     border-collapse: collapse;
+}
+div.boxed{
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  margin-top: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  padding: 1%;
+}
+h5{
+  margin-left: 40px;
+  margin-bottom: 2px;
+  float: left;
+  margin-top: 10px;
+}
+a.material-icons{
+  float: right;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+mat-card{
+  display:inline-table;
+  margin: 2%;
+  height: 180px;
+  width: 280px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(17, 16, 16, 0.2);
+  margin: 30px;
+  text-align: center;
+}
+section{
+  margin: 5%;
+}
+.container{
+    border: 1px solid rgb(216, 215, 215);
+    box-shadow: 0 8px 16px 0 rgba(221, 214, 214, 0.2);
+    background-color: rgba(247,248,249,255);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    height: 100%;
+    width: 95%;
+    padding: 1%;
+    overflow: hidden;
+}
+.show{
+	display: block;
+	bottom: 0;
+	visibility: visible;
+	position: relative;
+	transition: all 1s ease-in-out;
+		height: auto;
+		z-index: 0;
+
+
+}
+.hide{
+	display: block;
+	visibility: hidden;
+	position: relative;
+	height: 0 !important;
+	bottom: -1000px;	
+	z-index: -10;
+	transition: all 1s ease-in-out;
 }
